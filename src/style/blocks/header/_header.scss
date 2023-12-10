@@ -1,0 +1,112 @@
+.header {
+  &__top {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--tb {
+      display: none;
+    }
+
+  }
+
+  &__right {
+
+    & svg {
+      cursor: pointer;
+    }
+
+    & svg {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 15px 0;
+    border: 1px solid #DDD;
+  }
+
+  &__list {
+    display: none;
+  }
+
+
+
+
+  @include media-min($sm) {
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__elements {
+      &--tb {
+
+        display: block;
+      }
+
+      &--mb {
+        display: none;
+      }
+
+
+    }
+
+    &__list {
+      font-size: 20px;
+      color: var(--dark-grey);
+      justify-content: space-between;
+      cursor: pointer;
+
+
+      &--sm {
+        display: flex;
+      }
+    }
+  }
+
+  @include media-min($xl) {
+    &__top {
+      padding: 25px 0;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__bottom {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &__list {
+      & > li {
+        margin-right: 60px;
+      }
+
+      &--sm {
+        display: none;
+      }
+
+      &--xl {
+        display: flex;
+      }
+    }
+  }
+}

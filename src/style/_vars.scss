@@ -1,0 +1,31 @@
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --text-color: #85859B;
+  --h2-color: #666666;
+  --dark-grey: #4C5866;
+  --light-grey: #DAD9FB;
+  --dark-purple: #7875FE;
+  --light-purple: #4946B4;
+
+  --btn-text: var(--dark-purple);
+
+  // other vars
+  --min-site-width: 320px;
+  --max-site-width: 1590px;
+  --b-radius: 4px;
+
+  // theme vars
+  --main-text: var(--text-color);
+  --main-text-inv: var(--black);
+  --main-bg: var(--white);
+  --main-bg-gray: #EBEBEB;
+
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;
+$main-font: "Roboto";

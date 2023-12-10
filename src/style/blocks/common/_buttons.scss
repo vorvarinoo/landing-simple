@@ -1,0 +1,42 @@
+.btn {
+  @include btn-reset;
+  @include set-font(20px, 1.4, 400);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--btn-offset, var(--btn-offset-vertical, 16px) var(--btn-offset-horizontal, 60px));
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  text-decoration: none;
+  border: 1px solid var(--dark-purple);
+
+  & svg {
+    margin-right: 12px;
+  }
+
+  &--icon-reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+.btn:hover {
+  color: var(--white);
+  background-color: var(--dark-purple);
+  transition: 0.5s;
+}
+
+.btn:focus {
+  color: var(--dark-purple);
+  background-color: var(--light-grey);
+  transition: 0.5s;
+}
+
+.btn:active {
+  color: var(--white);
+  background-color: var(--light-purple);
+  transition: 0.5s;
+}
