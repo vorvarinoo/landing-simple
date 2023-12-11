@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container">
-    <div class="header__top">
+    <div class="header__wrapper">
       <div class="header__logo">
         <svg width="140"
              height="23"
@@ -8,37 +8,17 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </div>
-      <div class="header__right">
-        <ul class="header__list list-reset header__list--xl">
-          <li><a href=""></a>Продукция</li>
-          <li><a href=""></a>Материалы</li>
-          <li><a href=""></a>О нас</li>
-          <li><a href=""></a>Контакты</li>
-        </ul>
-        <div class="header__elements header__elements--tb">
-          <svg class="header_search"
-               width="24"
-               height="24"
-               aria-hidden="true">
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
-          <svg class="header__login"
-               width="24"
-               height="24"
-               aria-hidden="true">
-            <use xlink:href="img/sprite.svg#login"></use>
-          </svg>
-        </div>
-      </div>
-    </div>
 
-  </div>
+      <ul class="header__list list-reset">
+        <li><a href=""></a>Продукция</li>
+        <li><a href=""></a>Материалы</li>
+        <li><a href=""></a>О нас</li>
+        <li><a href=""></a>Контакты</li>
+      </ul>
 
-  <div class="header__bottom">
-    <div class="container">
-      <div class="header__elements header__elements--mb">
-        <div class="header__left">
-          <button class="header__burger btn-reset"
+      <div class="header__left">
+        <div class="header__burger">
+          <button class="burger btn-reset"
                   aria-label="Меню"
                   id="just-burger">
             <svg class="just-burger__icon"
@@ -54,8 +34,9 @@
             </svg>
           </button>
         </div>
-        <div class="header__right">
-          <svg class="header_search"
+
+        <div class="header__elements ">
+          <svg class="header__search"
                width="24"
                height="24"
                aria-hidden="true">
@@ -70,12 +51,6 @@
         </div>
       </div>
 
-      <ul class="header__list list-reset header__list--sm">
-        <li><a href=""></a>Продукция</li>
-        <li><a href=""></a>Материалы</li>
-        <li><a href=""></a>О нас</li>
-        <li><a href=""></a>Контакты</li>
-      </ul>
     </div>
   </div>
 </header>
