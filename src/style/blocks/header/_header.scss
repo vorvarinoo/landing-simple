@@ -20,9 +20,9 @@
       content: "";
       border-bottom: 1px solid #DDDDDD;
       position: absolute;
-      width: 200%;
+      width: 150vw;
       bottom: 0;
-      left: -50%;
+      left: -50vw;
     }
   }
 
@@ -44,9 +44,9 @@
       content: "";
       border-bottom: 1px solid #DDDDDD;
       position: absolute;
-      width: 200%;
+      width: 150vw;
       bottom: 0;
-      left: -50%;
+      left: -50vw;
     }
   }
 
@@ -92,18 +92,18 @@
         content: "";
         border-top: 1px solid #DDDDDD;
         position: absolute;
-        width: 200%;
+        width: 150vw;
         top: 0;
-        left: -50%;
+        left: -50vw;
       }
 
       &::after {
         content: "";
         border-bottom: 1px solid #DDDDDD;
         position: absolute;
-        width: 200%;
+        width: 150vw;
         bottom: -1px;
-        left: -50%;
+        left: -50vw;
       }
 
     }
@@ -134,9 +134,9 @@
         content: "";
         border-bottom: 1px solid #DDDDDD;
         position: absolute;
-        width: 200%;
+        width: 150vw;
         bottom: 0;
-        left: -50%;
+        left: -50vw;
       }
     }
 
