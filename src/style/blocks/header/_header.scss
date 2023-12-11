@@ -21,12 +21,8 @@
   }
 
   &__right {
-
     & svg {
       cursor: pointer;
-    }
-
-    & svg {
       margin-right: 30px;
 
       &:last-child {
@@ -37,15 +33,12 @@
 
   &__bottom {
     padding: 15px 0;
-    border: 1px solid #DDD;
+    border: 1px solid #DDDDDD;
   }
 
   &__list {
     display: none;
   }
-
-
-
 
   @include media-min($sm) {
     &__top {
@@ -56,15 +49,12 @@
 
     &__elements {
       &--tb {
-
         display: block;
       }
 
       &--mb {
         display: none;
       }
-
-
     }
 
     &__list {
