@@ -816,6 +816,29 @@ strong {
   }
 }
 
+.header {
+  position: relative;
+}
+.header--border::before {
+  content: "";
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+
+  width: 100%;
+
+  border-bottom: 1px solid #dddddd;
+}
+.header--border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  border-bottom: 1px solid #dddddd;
+}
 .header__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -844,25 +867,8 @@ strong {
   align-items: center;
   padding: 15px 0;
 }
-.header__left::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -50vw;
-
-  width: 150vw;
-
-  border-bottom: 1px solid #dddddd;
-}
-.header__left::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50vw;
-
-  width: 150vw;
-
-  border-bottom: 1px solid #dddddd;
+.header__elements {
+  display: flex;
 }
 .header__elements > svg {
   margin-right: 30px;
@@ -873,6 +879,9 @@ strong {
   margin-right: 0;
 }
 @media (min-width: 576px) {
+  .header--border::before {
+    bottom: 45%;
+  }
   .header__logo {
     flex-basis: auto;
     justify-content: flex-start;
@@ -883,6 +892,7 @@ strong {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
+    align-items: center;
     order: 3;
     padding: 17px 0;
 
@@ -891,54 +901,23 @@ strong {
   .header__list > li {
     cursor: pointer;
   }
-  .header__list::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50vw;
-
-    width: 150vw;
-
-    border-top: 1px solid #dddddd;
-  }
-  .header__list::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: -50vw;
-
-    width: 150vw;
-
-    border-bottom: 1px solid #dddddd;
-  }
   .header__left {
     flex-basis: auto;
     justify-content: flex-end;
-  }
-  .header__left::after,
-  .header__left::before {
-    border-bottom: none;
   }
   .header__burger {
     display: none;
   }
 }
 @media (min-width: 992px) {
+  .header--border::before {
+    border: none;
+  }
   .header__wrapper {
     position: relative;
 
     flex-wrap: nowrap;
     padding: 30px 0;
-  }
-  .header__wrapper::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -50vw;
-
-    width: 150vw;
-
-    border-bottom: 1px solid #dddddd;
   }
   .header__logo {
     flex-grow: 1;
@@ -955,10 +934,6 @@ strong {
   }
   .header__list > li {
     margin-right: 60px;
-  }
-  .header__list::before,
-  .header__list::after {
-    border: none;
   }
   .header__left {
     flex-shrink: 0;
