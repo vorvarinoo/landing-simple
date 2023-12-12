@@ -40,3 +40,17 @@ input[type="checkbox"].visually-hidden {
 .custom-scroll {
   @include custom-scroll;
 }
+
+.hide {
+  transform: translateX(-100%);
+  transition: all .5s ease;
+}
+
+.open {
+  transform: translateX(0);
+  transition: all .5s ease;
+}
+
+.is-open-menu {
+  overflow: hidden;
+}
