@@ -832,16 +832,6 @@ strong {
 
   cursor: pointer;
 }
-.header__logo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -50vw;
-
-  width: 150vw;
-
-  border-bottom: 1px solid #dddddd;
-}
 .header__list {
   display: none;
 }
@@ -854,10 +844,20 @@ strong {
   align-items: center;
   padding: 15px 0;
 }
-.header__left::after {
+.header__left::before {
   content: "";
   position: absolute;
   bottom: 0;
+  left: -50vw;
+
+  width: 150vw;
+
+  border-bottom: 1px solid #dddddd;
+}
+.header__left::after {
+  content: "";
+  position: absolute;
+  top: 0;
   left: -50vw;
 
   width: 150vw;
@@ -876,9 +876,6 @@ strong {
   .header__logo {
     flex-basis: auto;
     justify-content: flex-start;
-  }
-  .header__logo::after {
-    border-bottom: none;
   }
   .header__list {
     position: relative;
@@ -918,7 +915,8 @@ strong {
     flex-basis: auto;
     justify-content: flex-end;
   }
-  .header__left::after {
+  .header__left::after,
+  .header__left::before {
     border-bottom: none;
   }
   .header__burger {
