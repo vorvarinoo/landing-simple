@@ -1,5 +1,25 @@
 .header {
-  &_search {}
+  position: relative;
+
+  &--border {
+    &::before {
+      content: "";
+      border-bottom: 1px solid #DDDDDD;
+      position: absolute;
+      width: 100%;
+      bottom: 60%;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid #DDDDDD;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -16,14 +36,7 @@
     padding: 10px 0;
     cursor: pointer;
 
-    &::after {
-      content: "";
-      border-bottom: 1px solid #DDDDDD;
-      position: absolute;
-      width: 150vw;
-      bottom: 0;
-      left: -50vw;
-    }
+
   }
 
   &__burger {}
@@ -40,17 +53,11 @@
     position: relative;
     padding: 15px 0;
 
-    &::after {
-      content: "";
-      border-bottom: 1px solid #DDDDDD;
-      position: absolute;
-      width: 150vw;
-      bottom: 0;
-      left: -50vw;
-    }
+
   }
 
   &__elements {
+    display: flex;
 
     & > svg {
       cursor: pointer;
@@ -60,19 +67,20 @@
         margin-right: 0;
       }
     }
-
-
   }
 
   @include media-min($sm) {
+    &--border {
+      &::before {
+        bottom: 45%;
+      }
+    }
 
     &__logo {
       flex-basis: auto;
       justify-content: flex-start;
 
-      &::after {
-        border-bottom: none;
-      }
+
     }
 
     &__list {
@@ -83,28 +91,13 @@
       position: relative;
       padding: 17px 0;
       font-size: 20px;
+      align-items: center;
 
       & > li {
         cursor: pointer;
       }
 
-      &::before {
-        content: "";
-        border-top: 1px solid #DDDDDD;
-        position: absolute;
-        width: 150vw;
-        top: 0;
-        left: -50vw;
-      }
 
-      &::after {
-        content: "";
-        border-bottom: 1px solid #DDDDDD;
-        position: absolute;
-        width: 150vw;
-        bottom: -1px;
-        left: -50vw;
-      }
 
     }
 
@@ -112,9 +105,7 @@
       flex-basis: auto;
       justify-content: flex-end;
 
-      &::after {
-        border-bottom: none;
-      }
+
     }
 
     &__burger {
@@ -125,19 +116,18 @@
 
 
   @include media-min($lg) {
+    &--border {
+      &::before {
+        border: none;
+      }
+    }
+
     &__wrapper {
       flex-wrap: nowrap;
       padding: 30px 0;
       position: relative;
 
-      &::after {
-        content: "";
-        border-bottom: 1px solid #DDDDDD;
-        position: absolute;
-        width: 150vw;
-        bottom: 0;
-        left: -50vw;
-      }
+
     }
 
     &__logo {
@@ -158,10 +148,7 @@
         margin-right: 60px;
       }
 
-      &::before,
-      &::after {
-        border: none
-      }
+
     }
 
     &__left {
