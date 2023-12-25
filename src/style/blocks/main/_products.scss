@@ -1,0 +1,73 @@
+.products {
+  padding: 60px 0;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 60px 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    & > h3 {
+      margin: 0;
+      margin-top: 20px;
+      color: #666;
+      font-size: 24px;
+    }
+
+    & > span {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #B5B5BD;
+    }
+  }
+
+  &__item-text {
+    margin-top: 10px;
+
+    & > p {
+      margin: 0;
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 170%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item-img {
+    background-color: #EBEBEB;
+    overflow: hidden;
+    max-height: 180px;
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  &__item-btn {
+    margin-top: 30px;
+    display: inline-block;
+    text-align: start;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Arrow 1' d='M20.7071 8.20711C21.0976 7.81658 21.0976 7.18342 20.7071 6.79289L14.3431 0.428932C13.9526 0.0384078 13.3195 0.0384078 12.9289 0.428932C12.5384 0.819457 12.5384 1.45262 12.9289 1.84315L18.5858 7.5L12.9289 13.1569C12.5384 13.5474 12.5384 14.1805 12.9289 14.5711C13.3195 14.9616 13.9526 14.9616 14.3431 14.5711L20.7071 8.20711ZM0 8.5H20V6.5H0V8.5Z' fill='%237875FE'/%3E%3C/svg%3E%0A");
+      position: absolute;
+      width: 21px;
+      height: 15px;
+      top: 0px;
+      right: 10px;
+    }
+  }
+
+
+}
+
+.container {}
